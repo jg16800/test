@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* CSS Document */
+/*=====reset css=====*/
+
+/*所以的标签和伪元素都选中*/
+*,*::before,::after{
+	margin: 0;
+	padding: 0;
+	/*移动端常用布局是非固定像素*/
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	/*点击高亮效果的清除*/
+	tap-highlight-color: transparent;
+	-webkit-tap-highlight-color: transparent;
+}
+body{
+	font-size: 14px;
+	font-family: "Microsoft YaHei",sans-serif;
+	color: #333;
+}
+ul,ol{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+input,textarea{
+	border: none;
+	outline: none;
+	/*不允许改变尺寸*/
+	resize: none;
+	/*元素的外观  none没有任何样式*/
+	-webkit-appearance: none;
+}
+
+
+/*=====common  css=====*/
+.f_left{
+	float: left;
+}
+.f_right{
+	float: right;
+}
+.clearFix::before,.clearFix::after{
+	content: "";
+	display: block;
+	visibility: hidden;
+	height: 0;
+	line-height: 0;
+	clear: both;
+}
+.m_t10{
+	margin-top: 10px;
+}
+.m_r10{
+	margin-right: 10px;
+}
+.m_b10{
+	margin-bottom: 10px;
+}
+.m_l10{
+	margin-left: 10px;
+}
+/*使用精灵图的缩放公式*/
+/*一次调用多次读取*/
+/*^=表示所以以icon_开头的class   *=表示包含所以icon_的class   下面 icon_表示前面是空格后面是icon_开头的所以class*/
+[class^="icon_"],[class*=" icon_"]{
+	background: url(../Images/sprites.png);
+	background-repeat: no-repeat;
+	/*缩放尺寸*/
+	background-size: 200px 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
